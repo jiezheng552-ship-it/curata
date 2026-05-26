@@ -1,0 +1,148 @@
+name: RSS to Telegram
+
+on:
+  schedule:
+    # 每天北京时间 10:00 检查新文章
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  check-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check sitemap and send to Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          # 获取上次推送的文章列表
+          LAST_FILE=".telegram_last"
+          if [ -f "$LAST_FILE" ]; then
+            LAST=$(cat "$LAST_FILE")
+          else
+            LAST=""
+          fi
+
+          # 从 sitemap 提取文章 URL
+          LATEST=$(python3 -c "
+import xml.etree.ElementTree as ET
+from datetime import datetime, timezone
+tree = ET.parse('sitemap.xml')
+ns = {'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+urls = []
+for url in tree.findall('ns:url', ns):
+    loc = url.find('ns:loc', ns).text
+    lastmod = url.find('ns:lastmod', ns)
+    if lastmod is not None:
+        dt = datetime.fromisoformat(lastmod.text.replace('Z', '+00:00'))
+    else:
+        dt = datetime(2020,1,1, tzinfo=timezone.utc)
+    # 只取 blog 文章
+    if '/blog/' in loc and loc != 'https://curata-green.vercel.app/blog/index.html':
+        urls.append((dt, loc))
+urls.sort(reverse=True)
+for dt, loc in urls[:5]:
+    print(f'{dt.date().isoformat()}|{loc}')
+")
+
+          if [ -z "$LATEST" ]; then
+            echo "No articles found"
+            exit 0
+          fi
+
+          # 检查每篇文章是否是新发布的
+          while IFS= read -r line; do
+            DATE=$(echo "$line" | cut -d'|' -f1)
+            URL=$(echo "$line" | cut -d'|' -f2)
+            SLUG=$(basename "$URL" .html)
+            ARTICLE_FILE="blog/${SLUG}.html"
+
+            if [ "$LAST" = "$URL" ]; then
+              echo "No new articles since $LAST"
+              break
+            fi
+
+            # 提取文章标题和摘要
+            TITLE=$(python3 -c "
+from html.parser import HTMLParser
+class P(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.in_title = False
+        self.t = ''
+    def handle_starttag(self, tag, attrs):
+        if tag == 'title':
+            self.in_title = True
+    def handle_endtag(self, tag):
+        if tag == 'title':
+            self.in_title = False
+    def handle_data(self, data):
+        if self.in_title:
+            self.t = data.strip()
+try:
+    with open('$ARTICLE_FILE') as f:
+        p = P()
+        p.feed(f.read())
+        print(p.t.replace('— Curata', '').strip())
+except:
+    print('')
+")
+            DESC=$(python3 -c "
+from html.parser import HTMLParser
+class P(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.in_meta = False
+        self.d = ''
+    def handle_starttag(self, tag, attrs):
+        d = dict(attrs)
+        if tag == 'meta' and d.get('name') == 'description':
+            self.d = d.get('content', '')
+try:
+    with open('$ARTICLE_FILE') as f:
+        p = P()
+        p.feed(f.read())
+        print(p.d[:200])
+except:
+    print('')
+")
+
+            [ -z "$TITLE" ] && TITLE="Curata 新文章"
+
+            # 发送到 Telegram
+            MSG="<b>📝 Curata 新文章</b>
+
+<b>$TITLE</b>
+
+$DESC
+
+🔗 <a href=\"$URL\">阅读全文</a>"
+
+            if [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then
+              curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+                -d "chat_id=${TELEGRAM_CHAT_ID}" \
+                -d "text=${MSG}" \
+                -d "parse_mode=HTML" \
+                -d "disable_web_page_preview=false"
+              echo ""
+              echo "Sent: $TITLE"
+            else
+              echo "TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not set. Would send:"
+              echo "$MSG"
+            fi
+
+            echo "$URL" > "$LAST_FILE"
+          done <<< "$LATEST"
+
+      - name: Save last pushed
+        run: |
+          if [ -f ".telegram_last" ]; then
+            git config user.name "Curata Bot"
+            git config user.email "bot@curata.app"
+            git add .telegram_last
+            git diff --cached --quiet || git commit -m "chore: update telegram last push marker"
+            git push
+          fi
