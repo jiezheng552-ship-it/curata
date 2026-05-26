@@ -342,6 +342,25 @@ def generate_template_body(template):
     return bodies.get(template["id"], "")
 
 # ── HTML Generation ────────────────────────────────────────────
+def make_platform_buttons(keyword):
+    """Generate multi-platform buy buttons for a product keyword."""
+    buttons = []
+
+    # Pinduoduo (always enabled)
+    pdd_url = f"https://mobile.yangkeduo.com/search_result.html?search_key={keyword}"
+    buttons.append(f'<a href="{pdd_url}" class="post-pick-btn post-pick-btn-pdd" rel="sponsored" target="_blank">拼多多</a>')
+
+    # Taobao
+    tb_url = f"https://s.taobao.com/search?q={keyword}"
+    buttons.append(f'<a href="{tb_url}" class="post-pick-btn post-pick-btn-taobao" rel="sponsored" target="_blank">淘宝</a>')
+
+    # Jingdong
+    jd_url = f"https://search.jd.com/Search?keyword={keyword}"
+    buttons.append(f'<a href="{jd_url}" class="post-pick-btn post-pick-btn-jd" rel="sponsored" target="_blank">京东</a>')
+
+    return f'<div class="post-pick-actions">{"".join(buttons)}</div>'
+
+
 def make_article_html(template, body_html, today):
     """Generate full article HTML page."""
     slug = template["id"]
@@ -352,12 +371,14 @@ def make_article_html(template, body_html, today):
     hero_img = f"../images/{slug}-hero.jpg"
     products_html = ""
     for name, price, tag, kw in template["products"]:
+        platform_btns = make_platform_buttons(kw)
         products_html += f'''
           <a href="https://mobile.yangkeduo.com/search_result.html?search_key={kw}" class="post-pick-card" rel="sponsored">
             <span class="post-pick-name">{name}</span>
             <span class="post-pick-tag">{tag}</span>
             <span class="post-pick-price">{price}</span>
             <span class="post-pick-link">查看价格 &rarr;</span>
+            {platform_btns}
           </a>'''
 
     return f'''<!DOCTYPE html>

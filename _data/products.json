@@ -1,0 +1,264 @@
+{
+  "_note": "商品联盟链接映射表。每个商品可配多个平台链接，enabled=true 时显示该平台按钮",
+  "products": {
+    "Keychron V3": {
+      "name": "Keychron V3",
+      "category": "数码",
+      "pinduoduo": { "keyword": "Keychron+V3+机械键盘", "enabled": true },
+      "taobao": { "keyword": "Keychron V3", "enabled": false },
+      "jingdong": { "keyword": "Keychron V3", "enabled": false }
+    },
+    "Leopold FC900R": {
+      "name": "Leopold FC900R",
+      "category": "数码",
+      "pinduoduo": { "keyword": "Leopold+FC900R+机械键盘", "enabled": true },
+      "taobao": { "keyword": "Leopold FC900R", "enabled": false },
+      "jingdong": { "keyword": "Leopold FC900R", "enabled": false }
+    },
+    "NuPhy Air75 V2": {
+      "name": "NuPhy Air75 V2",
+      "category": "数码",
+      "pinduoduo": { "keyword": "NuPhy+Air75+V2+机械键盘", "enabled": true },
+      "taobao": { "keyword": "NuPhy Air75 V2", "enabled": false },
+      "jingdong": { "keyword": "NuPhy Air75 V2", "enabled": false }
+    },
+    "小米20寸行李箱": {
+      "name": "小米 20 寸行李箱",
+      "category": "旅行",
+      "pinduoduo": { "keyword": "小米+20寸+行李箱+登机箱", "enabled": true },
+      "taobao": { "keyword": "小米 20寸 行李箱", "enabled": false },
+      "jingdong": { "keyword": "小米行李箱 20寸", "enabled": false }
+    },
+    "Delsey Chatelet 2.0": {
+      "name": "Delsey Chatelet 2.0",
+      "category": "旅行",
+      "pinduoduo": { "keyword": "Delsey+Chatelet+2.0+行李箱", "enabled": true },
+      "taobao": { "keyword": "Delsey Chatelet 2.0", "enabled": false },
+      "jingdong": { "keyword": "Delsey Chatelet 2.0", "enabled": false }
+    },
+    "Samsonite Inova": {
+      "name": "Samsonite Inova",
+      "category": "旅行",
+      "pinduoduo": { "keyword": "Samsonite+Inova+行李箱", "enabled": true },
+      "taobao": { "keyword": "Samsonite Inova", "enabled": false },
+      "jingdong": { "keyword": "Samsonite Inova", "enabled": false }
+    },
+    "飞利浦电动牙刷6800": {
+      "name": "飞利浦 Sonicare 6800",
+      "category": "生活",
+      "pinduoduo": { "keyword": "飞利浦+Sonicare+6800+电动牙刷", "enabled": true },
+      "taobao": { "keyword": "飞利浦 Sonicare 6800", "enabled": false },
+      "jingdong": { "keyword": "飞利浦 Sonicare 6800", "enabled": false }
+    },
+    "欧乐B iO3": {
+      "name": "欧乐B iO Series 3",
+      "category": "生活",
+      "pinduoduo": { "keyword": "欧乐B+iO3+电动牙刷", "enabled": true },
+      "taobao": { "keyword": "欧乐B iO3", "enabled": false },
+      "jingdong": { "keyword": "欧乐B iO3", "enabled": false }
+    },
+    "Usmile Y1": {
+      "name": "Usmile Y1",
+      "category": "生活",
+      "pinduoduo": { "keyword": "Usmile+Y1+电动牙刷", "enabled": true },
+      "taobao": { "keyword": "Usmile Y1", "enabled": false },
+      "jingdong": { "keyword": "Usmile Y1", "enabled": false }
+    },
+    "Sony WH-1000XM6": {
+      "name": "Sony WH-1000XM6",
+      "category": "数码",
+      "pinduoduo": { "keyword": "Sony+WH-1000XM6+耳机", "enabled": true },
+      "taobao": { "keyword": "Sony WH-1000XM6", "enabled": false },
+      "jingdong": { "keyword": "Sony WH-1000XM6", "enabled": false }
+    },
+    "Herman Miller Embody": {
+      "name": "Herman Miller × Logitech Embody",
+      "category": "生活",
+      "pinduoduo": { "keyword": "Herman+Miller+Embody+人体工学椅", "enabled": true },
+      "taobao": { "keyword": "Herman Miller Embody", "enabled": false },
+      "jingdong": { "keyword": "Herman Miller Embody", "enabled": false }
+    },
+    "Kindle Scribe 2025": {
+      "name": "Kindle Scribe (2025)",
+      "category": "数码",
+      "pinduoduo": { "keyword": "Kindle+Scribe+2025+电子书", "enabled": true },
+      "taobao": { "keyword": "Kindle Scribe 2025", "enabled": false },
+      "jingdong": { "keyword": "Kindle Scribe 2025", "enabled": false }
+    },
+    "MacBook Air M4": {
+      "name": "MacBook Air M4",
+      "category": "数码",
+      "pinduoduo": { "keyword": "MacBook+Air+M4+苹果笔记本", "enabled": true },
+      "taobao": { "keyword": "MacBook Air M4", "enabled": false },
+      "jingdong": { "keyword": "MacBook Air M4", "enabled": false }
+    },
+    "Fujifilm X-T6": {
+      "name": "Fujifilm X-T6",
+      "category": "数码",
+      "pinduoduo": { "keyword": "Fujifilm+X-T6+微单相机", "enabled": true },
+      "taobao": { "keyword": "Fujifilm X-T6", "enabled": false },
+      "jingdong": { "keyword": "Fujifilm X-T6", "enabled": false }
+    },
+    "小米空气净化器4 Pro": {
+      "name": "小米空气净化器 4 Pro",
+      "category": "生活",
+      "pinduoduo": { "keyword": "小米+空气净化器+4+Pro", "enabled": true },
+      "taobao": { "keyword": "小米空气净化器 4 Pro", "enabled": false },
+      "jingdong": { "keyword": "小米空气净化器 4 Pro", "enabled": false }
+    },
+    "Stagg EKG": {
+      "name": "Fellow Stagg EKG",
+      "category": "生活",
+      "pinduoduo": { "keyword": "Fellow+Stagg+EKG+温控手冲壶", "enabled": true },
+      "taobao": { "keyword": "Fellow Stagg EKG", "enabled": false },
+      "jingdong": { "keyword": "Fellow Stagg EKG", "enabled": false }
+    },
+    "JBL Charge 5": {
+      "name": "JBL Charge 5",
+      "category": "数码",
+      "pinduoduo": { "keyword": "JBL+Charge+5+蓝牙音箱", "enabled": true },
+      "taobao": { "keyword": "JBL Charge 5", "enabled": false },
+      "jingdong": { "keyword": "JBL Charge 5", "enabled": false }
+    },
+    "Marshall Emberton II": {
+      "name": "Marshall Emberton II",
+      "category": "数码",
+      "pinduoduo": { "keyword": "Marshall+Emberton+II+音箱", "enabled": true },
+      "taobao": { "keyword": "Marshall Emberton II", "enabled": false },
+      "jingdong": { "keyword": "Marshall Emberton II", "enabled": false }
+    },
+    "Bose SoundLink Flex": {
+      "name": "Bose SoundLink Flex",
+      "category": "数码",
+      "pinduoduo": { "keyword": "Bose+SoundLink+Flex+蓝牙音箱", "enabled": true },
+      "taobao": { "keyword": "Bose SoundLink Flex", "enabled": false },
+      "jingdong": { "keyword": "Bose SoundLink Flex", "enabled": false }
+    },
+    "IQAir HealthPro 250": {
+      "name": "IQAir HealthPro 250",
+      "category": "生活",
+      "pinduoduo": { "keyword": "IQAir+HealthPro+250+净化器", "enabled": true },
+      "taobao": { "keyword": "IQAir HealthPro 250", "enabled": false },
+      "jingdong": { "keyword": "IQAir HealthPro 250", "enabled": false }
+    },
+    "Blueair 411": {
+      "name": "Blueair 411",
+      "category": "生活",
+      "pinduoduo": { "keyword": "Blueair+411+空气净化器", "enabled": true },
+      "taobao": { "keyword": "Blueair 411", "enabled": false },
+      "jingdong": { "keyword": "Blueair 411", "enabled": false }
+    },
+    "Apple Watch Series 10": {
+      "name": "Apple Watch Series 10",
+      "category": "数码",
+      "pinduoduo": { "keyword": "Apple+Watch+Series+10+智能手表", "enabled": true },
+      "taobao": { "keyword": "Apple Watch Series 10", "enabled": false },
+      "jingdong": { "keyword": "Apple Watch Series 10", "enabled": false }
+    },
+    "佳明 Forerunner 265": {
+      "name": "佳明 Forerunner 265",
+      "category": "数码",
+      "pinduoduo": { "keyword": "佳明+Forerunner+265+运动手表", "enabled": true },
+      "taobao": { "keyword": "佳明 Forerunner 265", "enabled": false },
+      "jingdong": { "keyword": "佳明 Forerunner 265", "enabled": false }
+    },
+    "小米 Watch S4": {
+      "name": "小米 Watch S4",
+      "category": "数码",
+      "pinduoduo": { "keyword": "小米+Watch+S4+智能手表", "enabled": true },
+      "taobao": { "keyword": "小米 Watch S4", "enabled": false },
+      "jingdong": { "keyword": "小米 Watch S4", "enabled": false }
+    },
+    "BenQ ScreenBar Pro": {
+      "name": "BenQ ScreenBar Pro",
+      "category": "生活",
+      "pinduoduo": { "keyword": "BenQ+ScreenBar+Pro+挂灯", "enabled": true },
+      "taobao": { "keyword": "BenQ ScreenBar Pro", "enabled": false },
+      "jingdong": { "keyword": "BenQ ScreenBar Pro", "enabled": false }
+    },
+    "米家台灯 Pro": {
+      "name": "米家台灯 Pro",
+      "category": "生活",
+      "pinduoduo": { "keyword": "米家台灯+Pro+护眼", "enabled": true },
+      "taobao": { "keyword": "米家台灯 Pro", "enabled": false },
+      "jingdong": { "keyword": "米家台灯 Pro", "enabled": false }
+    },
+    "松下致飒HHLT-0633": {
+      "name": "松下致飒 HHLT-0633",
+      "category": "生活",
+      "pinduoduo": { "keyword": "松下+致飒+护眼台灯+HHLT", "enabled": true },
+      "taobao": { "keyword": "松下致飒 HHLT-0633", "enabled": false },
+      "jingdong": { "keyword": "松下致飒 HHLT-0633", "enabled": false }
+    },
+    "洁碧 Waterpik WP-660": {
+      "name": "洁碧 Waterpik WP-660",
+      "category": "生活",
+      "pinduoduo": { "keyword": "洁碧+Waterpik+WP-660+冲牙器", "enabled": true },
+      "taobao": { "keyword": "洁碧 Waterpik WP-660", "enabled": false },
+      "jingdong": { "keyword": "洁碧 Waterpik WP-660", "enabled": false }
+    },
+    "飞利浦 AirFloss": {
+      "name": "飞利浦 Sonicare AirFloss",
+      "category": "生活",
+      "pinduoduo": { "keyword": "飞利浦+Sonicare+AirFloss+冲牙器", "enabled": true },
+      "taobao": { "keyword": "飞利浦 Sonicare AirFloss", "enabled": false },
+      "jingdong": { "keyword": "飞利浦 AirFloss", "enabled": false }
+    },
+    "米家冲牙器": {
+      "name": "米家冲牙器",
+      "category": "生活",
+      "pinduoduo": { "keyword": "米家+冲牙器+便携", "enabled": true },
+      "taobao": { "keyword": "米家冲牙器", "enabled": false },
+      "jingdong": { "keyword": "米家冲牙器", "enabled": false }
+    },
+    "Dell U2724D": {
+      "name": "Dell U2724D",
+      "category": "数码",
+      "pinduoduo": { "keyword": "Dell+U2724D+27寸+显示器", "enabled": true },
+      "taobao": { "keyword": "Dell U2724D", "enabled": false },
+      "jingdong": { "keyword": "Dell U2724D", "enabled": false }
+    },
+    "LG 27GP95R": {
+      "name": "LG 27GP95R",
+      "category": "数码",
+      "pinduoduo": { "keyword": "LG+27GP95R+4K+显示器", "enabled": true },
+      "taobao": { "keyword": "LG 27GP95R", "enabled": false },
+      "jingdong": { "keyword": "LG 27GP95R", "enabled": false }
+    },
+    "小米27寸4K": {
+      "name": "小米 27 寸 4K 显示器",
+      "category": "数码",
+      "pinduoduo": { "keyword": "小米+27寸+4K+显示器", "enabled": true },
+      "taobao": { "keyword": "小米 27寸 4K 显示器", "enabled": false },
+      "jingdong": { "keyword": "小米 27寸 4K 显示器", "enabled": false }
+    },
+    "始祖鸟 Alpha SV": {
+      "name": "始祖鸟 Alpha SV",
+      "category": "旅行",
+      "pinduoduo": { "keyword": "始祖鸟+Alpha+SV+冲锋衣", "enabled": true },
+      "taobao": { "keyword": "始祖鸟 Alpha SV", "enabled": false },
+      "jingdong": { "keyword": "始祖鸟 Alpha SV", "enabled": false }
+    },
+    "北面 1996 Retro Nuptse": {
+      "name": "北面 1996 Retro Nuptse",
+      "category": "旅行",
+      "pinduoduo": { "keyword": "北面+1996+Retro+Nuptse+羽绒服", "enabled": true },
+      "taobao": { "keyword": "北面 1996 Retro Nuptse", "enabled": false },
+      "jingdong": { "keyword": "北面 1996 Retro Nuptse", "enabled": false }
+    },
+    "凯乐石 Mont-X": {
+      "name": "凯乐石 Mont-X",
+      "category": "旅行",
+      "pinduoduo": { "keyword": "凯乐石+Mont+X+冲锋衣", "enabled": true },
+      "taobao": { "keyword": "凯乐石 Mont-X", "enabled": false },
+      "jingdong": { "keyword": "凯乐石 Mont-X", "enabled": false }
+    },
+    "小米空气净化器 4 Pro": {
+      "name": "小米空气净化器 4 Pro",
+      "category": "生活",
+      "pinduoduo": { "keyword": "小米空气净化器+4+Pro", "enabled": true },
+      "taobao": { "keyword": "小米空气净化器 4 Pro", "enabled": false },
+      "jingdong": { "keyword": "小米空气净化器 4 Pro", "enabled": false }
+    }
+  }
+}

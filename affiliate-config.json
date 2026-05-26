@@ -1,7 +1,31 @@
 {
-  "platform": "pinduoduo",
-  "pid": "44432126_316051883",
+  "platforms": {
+    "pinduoduo": {
+      "name": "拼多多",
+      "enabled": true,
+      "pid": "44432126_316051883",
+      "search_url": "https://mobile.yangkeduo.com/search_result.html?search_key={keyword}",
+      "register_url": "https://jinbao.pinduoduo.com/",
+      "note": "多多进宝已配置 PID"
+    },
+    "taobao": {
+      "name": "淘宝",
+      "enabled": false,
+      "pid": "请替换为你的阿里妈妈PID",
+      "app_key": "请替换为你的APP KEY",
+      "search_url": "https://s.taobao.com/search?q={keyword}",
+      "register_url": "https://pub.alimama.com/",
+      "note": "需注册阿里妈妈联盟获取PID"
+    },
+    "jingdong": {
+      "name": "京东",
+      "enabled": false,
+      "pid": "请替换为你的京东联盟ID",
+      "search_url": "https://search.jd.com/Search?keyword={keyword}",
+      "register_url": "https://union.jd.com/",
+      "note": "需注册京东联盟获取推广ID"
+    }
+  },
   "site_name": "Curata",
-  "link_prefix": "https://mobile.yangkeduo.com/search_result.html?search_key=",
-  "note": "在 pid 填入你的多多进宝推广位 ID 后，所有链接会自动带上追踪参数"
+  "disclosure": "部分链接为联盟营销链接，不影响推荐公正性"
 }
