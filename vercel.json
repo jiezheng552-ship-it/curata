@@ -1,0 +1,15 @@
+{
+  "name": "curata",
+  "version": 2,
+  "builds": [
+    { "src": "/*", "use": "@vercel/static" },
+    { "src": "/blog/*", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/css/(.*)", "dest": "/css/$1" },
+    { "src": "/js/(.*)", "dest": "/js/$1" },
+    { "src": "/blog/(.*)", "dest": "/blog/$1" },
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
