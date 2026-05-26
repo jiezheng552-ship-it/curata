@@ -43,12 +43,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://curata-green.vercel.app/blog/post.html</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://curata-green.vercel.app/blog/kindle-scribe-2025.html</loc>
     <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
@@ -62,6 +56,42 @@
   </url>
   <url>
     <loc>https://curata-green.vercel.app/blog/fujifilm-xt6.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://curata-green.vercel.app/blog/post.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://curata-green.vercel.app/blog/wfh-desk-setup.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://curata-green.vercel.app/blog/money-books.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://curata-green.vercel.app/blog/mac-productivity-2026.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://curata-green.vercel.app/blog/edc-packing-list.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://curata-green.vercel.app/blog/coffee-machine-guide.html</loc>
     <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
