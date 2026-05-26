@@ -1,0 +1,7 @@
+{
+  "platform": "pinduoduo",
+  "pid": null,
+  "site_name": "Curata",
+  "link_prefix": "https://mobile.yangkeduo.com/search_result.html?search_key=",
+  "note": "在 pid 填入你的多多进宝推广位 ID 后，所有链接会自动带上追踪参数"
+}
