@@ -1,0 +1,40 @@
+name: Daily Content Update
+
+on:
+  schedule:
+    # 每天北京时间 09:00 运行 (UTC 1:00)
+    - cron: '0 1 * * *'
+  workflow_dispatch:  # 支持手动触发
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Generate new article
+        run: python scripts/generate_article.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Commit and push
+        run: |
+          git config user.name "Curata Bot"
+          git config user.email "bot@curata.app"
+          git add -A
+          # 如果没有新内容则跳过
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "chore: daily content update $(date +'%Y-%m-%d')"
+          git push
