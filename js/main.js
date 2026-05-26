@@ -136,6 +136,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ─── Scroll Reveal Animations ───
+  const revealElements = document.querySelectorAll('.reveal');
+  if (revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  }
+
   // ─── Pick cards hover subtle effect ───
   document.querySelectorAll('.pick-card, .recommend-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
